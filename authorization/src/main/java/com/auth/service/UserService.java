@@ -29,7 +29,7 @@ public class UserService {
             throw new UserNotFoundException(" Please check your credentials.");
         }
         UserDetails userDetails = this.custDetailService.loadUserByUsername(user.getUsername());
-        String token = jwtutil.dogenerateToken(userDetails);
+        String token = jwtutil.generateToken(userDetails);
         String userName = entity.getUsername();
         String userType = entity.getRole();
         UserToken userToken = new UserToken(userName, token, userType);

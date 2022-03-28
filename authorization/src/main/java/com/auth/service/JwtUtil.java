@@ -24,7 +24,7 @@ public class JwtUtil {
     }
 
 
-    public String dogenerateToken(UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails) {
         try {
 
             return Jwts.builder().setSubject(userDetails.getPassword())

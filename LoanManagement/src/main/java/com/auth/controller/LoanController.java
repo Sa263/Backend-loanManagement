@@ -1,4 +1,4 @@
-package com.loan.controller;
+package com.auth.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.loan.exception.InvalidSessionException;
-import com.loan.model.LoanDetails;
-import com.loan.service.LoanService;
+import com.auth.exception.InvalidSessionException;
+import com.auth.model.LoanDetails;
+import com.auth.service.LoanService;
 
 import java.util.List;
 

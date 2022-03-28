@@ -30,35 +30,28 @@ public class AuthController {
     @Autowired
     private UserService service;
 
-
     @GetMapping("/health")
     @HystrixCommand(fallbackMethod = "check_fail", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
-    })
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
+
     public int check() {
         log.info("Health method");
         return 200;
-    }
-    public int check_fail()
-    {
-        return 404;
-    }
+    }public int check_fail()  { return 404;}
+
 
 
     /* This is the Login Method */
     @PostMapping("/login")
-
     public ResponseEntity<?> login(@RequestBody UserLoginCredential userlogincredentials) throws UserNotFoundException {
         log.info("Login Method : login");
-        return new ResponseEntity<UserToken>(this.service.login(userlogincredentials), HttpStatus.OK);
-    }
-
+        return new ResponseEntity<UserToken>(this.service.login(userlogincredentials), HttpStatus.OK); }
 
 
 
     @GetMapping("/validate")
     public ResponseEntity<?> getValidity(@RequestHeader("Authorization") String jwtToken) {
-        return new ResponseEntity<AuthResponse>(this.service.validate(jwtToken), HttpStatus.OK);
-    }
+        return new ResponseEntity<AuthResponse>(this.service.validate(jwtToken), HttpStatus.OK);}}
 
-}
+
+

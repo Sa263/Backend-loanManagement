@@ -1,4 +1,4 @@
-package com.loan.exception;
+package com.auth.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

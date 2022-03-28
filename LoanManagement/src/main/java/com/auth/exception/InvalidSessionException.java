@@ -1,4 +1,4 @@
-package com.loan.exception;
+package com.auth.exception;
 
 public class InvalidSessionException extends Exception {
 

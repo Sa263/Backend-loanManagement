@@ -1,4 +1,4 @@
-package com.loan.model;
+package com.auth.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,9 +1,4 @@
-package com.loan.model;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+package com.auth.model;
 
 //Containes the response received by Auth Microservice
 //@Getter
