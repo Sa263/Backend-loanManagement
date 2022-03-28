@@ -1,8 +1,7 @@
-package com.loan.service;
+package com.auth.service;
 
-import com.loan.exception.InvalidSessionException;
-import com.loan.model.LoanDetails;
-import org.springframework.stereotype.Service;
+import com.auth.exception.InvalidSessionException;
+import com.auth.model.LoanDetails;
 
 import java.util.List;
 

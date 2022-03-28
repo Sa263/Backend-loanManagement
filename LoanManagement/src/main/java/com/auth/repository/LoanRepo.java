@@ -1,12 +1,10 @@
-package com.loan.repository;
+package com.auth.repository;
 
-import com.loan.model.LoanDetails;
+import com.auth.model.LoanDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @Repository

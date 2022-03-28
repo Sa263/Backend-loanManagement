@@ -1,18 +1,17 @@
-package com.loan.serviceImpl;
+package com.auth.serviceImpl;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
-import com.loan.exception.InvalidSessionException;
-import com.loan.exception.ResourceNotFoundException;
-import com.loan.model.LoanDetails;
-import com.loan.proxy.AuthProxy;
-import com.loan.repository.LoanRepo;
-import com.loan.service.LoanService;
+import com.auth.exception.InvalidSessionException;
+import com.auth.exception.ResourceNotFoundException;
+import com.auth.model.LoanDetails;
+import com.auth.proxy.AuthProxy;
+import com.auth.repository.LoanRepo;
+import com.auth.service.LoanService;
 
 import javax.transaction.Transactional;
 
