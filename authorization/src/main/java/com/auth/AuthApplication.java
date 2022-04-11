@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @Slf4j
 @SpringBootApplication
-@EnableEurekaClient
 public class AuthApplication {
 
     public static void main(String[] args) {
