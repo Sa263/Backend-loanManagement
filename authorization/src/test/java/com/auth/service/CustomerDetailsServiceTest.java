@@ -35,7 +35,7 @@ class CustomerDetailsServiceTest {
 
     @BeforeEach
     void setUp() {
-        user = new UserEntity("name", "pass", "admin");
+        user = new UserEntity(1,"name", "pass", "admin");
     }
 
     @Test

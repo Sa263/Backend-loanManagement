@@ -41,14 +41,14 @@ class UserServiceTest {
 
     @BeforeEach
     void serUp() {
-        user = new UserEntity("name", "pass", "admin");
+        user = new UserEntity(1,"name", "pass", "admin");
         credentials = new UserLoginCredential("name", "pass");
     }
 
     @Test
     void loginTest() throws UserNotFoundException {
         UserDetails value = new User(user.getUsername(), user.getPassword(), new ArrayList<>());
-        Mockito.when(repo.findByUsernameAndPassword("name", "pass")).thenReturn(user);
+        Mockito.when(repo.findByUsername("name")).thenReturn(user);
         Mockito.when(custService.loadUserByUsername("name")).thenReturn(value);
         Mockito.when(util.generateToken(value)).thenReturn(TOKEN);
         assertEquals(TOKEN, service.login(credentials).getAuthToken());
@@ -56,7 +56,7 @@ class UserServiceTest {
 
     @Test
     void loginFailTest() throws UserNotFoundException {
-        Mockito.when(repo.findByUsernameAndPassword("name", "pass")).thenReturn(null);
+        Mockito.when(repo.findByUsername("name")).thenReturn(null);
         assertThrows(UserNotFoundException.class, () -> service.login(credentials));
     }
 

@@ -1,14 +1,14 @@
 package com.auth.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 
 
 import com.auth.model.UserEntity;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, String> {
+public interface UserRepository extends MongoRepository<UserEntity, String> {
 
-    public UserEntity findByUsernameAndPassword(String name , String pass);
+    public UserEntity findByUsername(String name);
 
 }

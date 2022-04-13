@@ -24,7 +24,7 @@ public class UserService {
     private UserRepository userservice;
 
     public UserToken login(UserLoginCredential user) throws UserNotFoundException {
-        UserEntity entity = this.userservice.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+        UserEntity entity = this.userservice.findByUsername(user.getUsername());
         if (entity == null) {
             throw new UserNotFoundException(" Please check your credentials.");
         }
