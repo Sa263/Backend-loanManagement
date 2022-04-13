@@ -22,7 +22,7 @@ public class CustomerDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) {
-        UserEntity user = userDao.findById(username).get();
+        UserEntity user = userDao.findByUsername(username);
         return new User(user.getUsername(), user.getPassword(), new ArrayList<>());
     }
 

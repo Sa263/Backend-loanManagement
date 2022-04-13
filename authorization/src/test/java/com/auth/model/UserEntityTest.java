@@ -31,7 +31,7 @@ class UserEntityTest {
 
     @Test
     void allArgsCOnstructor() {
-        user = new UserEntity("admin", "pass", "admin");
+        user = new UserEntity(1,"admin", "pass", "admin");
         assertEquals("pass", user.getPassword());
         assertEquals("admin", user.getUsername());
         assertEquals("admin", user.getRole());
